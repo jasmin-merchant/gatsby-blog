@@ -10,12 +10,12 @@ const BlogPage = ({ data }) => {
                 data.allContentfulBlog.edges.map(({node}) => {
                     return (
                         <article key={node.id}>
-                            <h2> {node.title} </h2>
-                            {/* <h2> 
+                            {/* <h2> {node.title} </h2> */}
+                            <h2> 
                                 <Link to={node.slug}>
                                     {node.title}
                                 </Link>
-                            </h2> */}
+                            </h2>
                             <p>Posted on: {node.date}</p>
                         </article>
                     )
@@ -34,6 +34,7 @@ query {
           id
           title
           date(formatString: "MMMM DD, YYYY")
+          slug
         }
       }
     }
