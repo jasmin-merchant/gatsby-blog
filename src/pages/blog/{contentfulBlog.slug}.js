@@ -39,7 +39,7 @@ const BlogPost = ({ data }) => {
       />
       <p>
         Photo Credit:{" "}
-        <a href={data.contentfulBlog.heroImageCreditLink} target="_blank">
+        <a href={data.contentfulBlog.heroImageCreditLink} target="_blank" rel="noreferrer">
           {data.contentfulBlog.heroImageCreditText}
         </a>
       </p>
